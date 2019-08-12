@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>i m m a t e r i a l</title>
+    <link rel="stylesheet" type="text/css" href="immaterial.css">
+    <style>
+        html {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        body > div {
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+        }
+        h1, h2 {
+            font-weight: 300;
+            text-align: center;
+        }
+        button {
+            font-size: 1em;
+        }
+        pre {
+            margin:0;
+            display: inline-block;
+            font-size: 1.3em;
+        }
+        .im-text, .im-text-dark {
+            color: white;
+            font-weight: bold;
+            -webkit-text-stroke: 1px rgba(0, 0, 0, .25);
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+        }
+        .im-text-dark {
+            font-weight: 300;
+            color: rgba(0, 0, 0, .25);
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="im-plate">
+        <h1 class="im-text immaterial">I m m a t e r i a l</h1>
+        <h2 class="im-text-dark">When Material design just doesn't cut it</h2>
+        <div class="im-plate">This is a <pre>.im-plate</pre></div>
+        <div class="im-plate">Here's another <pre>.im-plate</pre></div>
+        <div class="im-plate im-hoverable">A hoverable div, i.e. <pre>div.im-hoverable</pre></div>
+        <div class="im-bed">
+            <h2>A <pre>.im-bed</pre> for buttons to go in</h2>
+            <button class="im-hoverable">Hoverable</button>
+            <button class="im-liftable">Liftable</button>
+            <button class="im-spreadable">Spreadable</button>
+            <button class="im-scalable">Scalable</button>
+            <button class="im-jaunt">Jaunt</button>
+            <button class="im-liftable im-scalable">Scale + Lift</button>
+        </div>
+        <div class="im-bed-dark im-hoverable">
+            <h2>A dark, hoverable bed for buttons to go in</h2>
+            <button class="im-hoverable"><pre>.im-hoverable</pre></button>
+            <button class="im-liftable"><pre>.im-liftable</pre></button>
+            <button class="im-spreadable"><pre>.im-spreadable</pre></button>
+            <button class="im-scalable"><pre>.im-scalable</pre></button>
+            <button class="im-jaunt"><pre>.im-jaunt</pre></button>
+            <button class="im-liftable im-scalable"><pre>.im-scalable.im-liftable</pre></button>
+        </div>
+    </div>
+</div>
+<script> </script>
+</body>
+</html>

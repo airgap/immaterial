@@ -1,0 +1,69 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.im-plate, .im-bed, .im-bed-dark, .im-hoverable, .im-jaunt, .im-scalable, .im-spreadable, .im-liftable {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+}
+
+div.im-plate, div.im-bed, div.im-bed-dark, div.im-hoverable, div.im-jaunt, div.im-scalable, div.im-spreadable, div.im-liftable {
+  padding: 10px;
+  margin: 20px;
+}
+
+.im-hoverable, .im-jaunt, .im-scalable, .im-spreadable, .im-liftable {
+  transition: 0.25s;
+  cursor: pointer;
+}
+.im-hoverable:hover, .im-jaunt:hover, .im-scalable:hover, .im-spreadable:hover, .im-liftable:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.im-liftable:hover {
+  transform: translateY(-5px);
+}
+
+.im-spreadable:hover {
+  margin: 0;
+  padding: 10px;
+}
+
+.im-scalable:hover {
+  transform: scale(1.15);
+}
+.im-scalable:hover.im-liftable {
+  transform: translateY(-5px) scale(1.15);
+}
+
+.im-bed, .im-bed-dark {
+  transition: 0.25s;
+  box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.im-bed-dark {
+  background-color: #eee;
+}
+.im-bed-dark:hover {
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.im-bed-dark:hover > .im-plate, .im-bed-dark:hover > .im-hoverable, .im-bed-dark:hover > .im-jaunt, .im-bed-dark:hover > .im-liftable, .im-bed-dark:hover > .im-spreadable, .im-bed-dark:hover > .im-scalable, .im-bed-dark:hover > .im-bed, .im-bed-dark:hover > .im-bed-dark {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.im-bed-dark:hover > .im-plate:hover, .im-bed-dark:hover > .im-hoverable:hover, .im-bed-dark:hover > .im-jaunt:hover, .im-bed-dark:hover > .im-liftable:hover, .im-bed-dark:hover > .im-spreadable:hover, .im-bed-dark:hover > .im-scalable:hover, .im-bed-dark:hover > .im-bed:hover, .im-bed-dark:hover > .im-bed-dark:hover {
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.im-jaunt:hover {
+  transform: rotate(10deg) translate(5px, -5px);
+}
+
+/*# sourceMappingURL=immaterial.css.map */

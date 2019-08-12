@@ -1,0 +1,75 @@
+$minor-radius: 5px
+$major-radius: 10px
+$ambient-color: rgba(0, 0, 0, .25)
+$highlight-color: rgba(0, 0, 0, .5)
+$ambient-border: 1px solid $ambient-color
+$quick-transition: .125s
+$mid-transition: .25s
+$long-transition: .5s
+$light-shadow: 0px 2px 5px 0px $ambient-color
+$mid-shadow: 0px 5px 10px 0px $ambient-color
+$long-shadow: 0px 10px 15px 0px $ambient-color
+$small-padding: 5px
+
+*, *::before, *::after
+  box-sizing: border-box
+
+html
+  font-family: sans-serif
+
+.im-plate
+  border: $ambient-border
+  border-radius: $minor-radius
+  background-color: white
+  padding: $small-padding
+  box-shadow: $light-shadow
+  margin: $small-padding
+
+div.im-plate
+  padding: 10px
+  margin: 20px
+
+.im-hoverable
+  @extend .im-plate
+  transition: $mid-transition
+  cursor: pointer
+  &:hover
+    //border-color: $highlight-color
+    box-shadow: $mid-shadow
+
+.im-liftable
+  @extend .im-hoverable
+  &:hover
+    transform: translateY(-5px)
+.im-spreadable
+  @extend .im-hoverable
+  &:hover
+    margin: 0
+    padding: 10px
+
+.im-scalable
+  @extend .im-hoverable
+  &:hover
+    transform: scale(1.15)
+    &.im-liftable
+        transform: translateY(-5px) scale(1.15)
+
+.im-bed
+  @extend .im-plate
+  transition: $mid-transition
+  box-shadow: inset $light-shadow
+
+.im-bed-dark
+  @extend .im-bed
+  background-color: #eee
+  &:hover
+    box-shadow: inset $mid-shadow
+    > .im-plate
+      box-shadow: $mid-shadow
+      &:hover
+        box-shadow: $long-shadow
+
+.im-jaunt
+  @extend .im-hoverable
+  &:hover
+    transform: rotate(10deg) translate(5px, -5px)
